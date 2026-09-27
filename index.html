@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>A Little Surprise 💗</title>
+
+<link rel="stylesheet" href="style.css">
+```
+
+</head>
+
+<body>
+
+```
+<!-- BACKGROUND MUSIC -->
+<audio id="bgMusic" loop preload="auto">
+    <source src="music/Ammaadi.mp3" type="audio/mpeg">
+</audio>
+
+<!-- MUSIC BUTTON -->
+<button
+    id="musicButton"
+    onclick="toggleMusic()"
+    style="
+        position: fixed;
+        top: 18px;
+        right: 18px;
+        z-index: 9999;
+        border: none;
+        background: rgba(255,250,248,0.9);
+        color: #8c676b;
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+        font-size: 20px;
+        cursor: pointer;
+        box-shadow: 0 5px 18px rgba(112,78,82,0.15);
+    ">
+    🎵
+</button>
+
+<!-- Floating hearts -->
+<div class="floating-hearts">
+    <span>♡</span>
+    <span>♡</span>
+    <span>♡</span>
+    <span>♡</span>
+    <span>♡</span>
+</div>
+
+
+<!-- =========================
+     PAGE 1 - SURPRISE
+     ========================= -->
+
+<main class="welcome-page" id="page1">
+
+    <div class="tiny-flower flower-one">✿</div>
+    <div class="tiny-flower flower-two">✿</div>
+
+    <div class="welcome-card">
+
+        <div class="little-heart">♡</div>
+
+        <p class="small-line">
+            Kanna... 💗
+        </p>
+
+        <h1>
+            I have a<br>
+            <span>surprise</span> for you...
+        </h1>
+
+        <p class="question">
+            Would you like to see it? 👀
+        </p>
+
+        <div class="buttons">
+
+            <button class="yes-btn" onclick="sayYes()">
+                YES 💕
+            </button>
+
+            <button class="no-btn" onclick="sayNo()">
+                NO 🙈
+            </button>
+
+        </div>
+
+       <p class="tiny-note">
+    choose carefully... hehe 🌷
+</p>
+
+<button id="musicButton" class="music-play-btn" onclick="toggleMusic()">
+    🎶 PLAY MUSIC
+</button>
+
+    </div>
+
+</main>
+
+
+<!-- =========================
+     PAGE 2 - ENVELOPE
+     ========================= -->
+
+<main class="welcome-page" id="page2" style="display: none;">
+
+    <div class="welcome-card">
+
+        <div class="little-heart">♡</div>
+
+        <p class="small-line">
+            Yayyy! You said YES! 🥹💗
+        </p>
+
+        <h1>
+            Something<br>
+            <span>for you...</span>
+        </h1>
+
+        <div class="envelope" onclick="openLetter()">
+
+            <div class="letter-paper"></div>
+
+            <div class="envelope-body"></div>
+
+            <div class="envelope-flap"></div>
+
+            <div class="envelope-left"></div>
+
+            <div class="envelope-right"></div>
+
+            <div class="envelope-bottom"></div>
+
+            <div class="envelope-label">
+                For my kanna 💗
+            </div>
+
+        </div>
+
+        <p class="question">
+            Open it 👀
+        </p>
+
+    </div>
+
+</main>
+
+
+<!-- =========================
+     PAGE 3 - ACTUAL LETTER
+     ========================= -->
+
+<main class="welcome-page" id="page3" style="display: none;">
+
+    <div class="letter-card">
+
+        <div class="paper-decoration">♡</div>
+
+        <div class="actual-letter">
+
+            <p class="letter-greeting">
+                Hey kanna… 💗
+            </p>
+
+            <p>
+                Ee little surprise antha neekosame. 🥹
+                Em pedda letter raayalani kaadhu…
+                just oka small reminder that you’re
+                very special to me. ❤️
+            </p>
+
+            <p>
+                Mana little moments, silly conversations,
+                random laughs… ivanni naaku chala precious. 🫶🏻
+            </p>
+
+            <p>
+                And honestly, nuvvu naa life lo undadam
+                naaku chala happy feeling. 💗
+            </p>
+
+            <p>
+                So… just smile, okay? 🙈
+            </p>
+
+            <p class="letter-love">
+                Love you, kanna. ❤️
+            </p>
+
+            <button class="yes-btn letter-next-btn" onclick="goToPage4()">
+                NEXT 🌸
+            </button>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<!-- =========================
+     PAGE 4 - OUR MEMORIES
+     ========================= -->
+
+<main class="welcome-page" id="page4" style="display: none;">
+
+    <div class="memories-card">
+
+        <div class="little-heart">♡</div>
+
+        <p class="small-line">
+            Our little memories 🥹💗
+        </p>
+
+        <h1>
+            Little moments,<br>
+            <span>big memories.</span>
+        </h1>
+
+        <p class="memories-intro">
+            Okay… now let's look at some of our little memories 🥹💗
+        </p>
+
+        <div class="memories-gallery">
+
+            <div class="memory-photo">
+                <img src="photos/photo1.jpg" alt="Our memory 1">
+                <p>This one 🥹💗</p>
+            </div>
+
+            <div class="memory-photo">
+                <img src="photos/photo2.jpg" alt="Our memory 2">
+                <p>One of my favourite memories… ❤️</p>
+            </div>
+
+            <div class="memory-photo">
+                <img src="photos/photo3.jpg" alt="Our memory 3">
+                <p>Us. 🫶🏻</p>
+            </div>
+
+            <div class="memory-photo">
+                <img src="photos/photo4.jpg" alt="Our memory 4">
+                <p>Little moment, big memory. 💗</p>
+            </div>
+
+            <div class="memory-photo">
+                <img src="photos/photo5.jpg" alt="Our memory 5">
+                <p>Another little memory 🥹</p>
+            </div>
+
+            <div class="memory-photo">
+                <img src="photos/photo6.jpg" alt="Our memory 6">
+                <p>Forever one of my favourites. ❤️</p>
+            </div>
+
+            <div class="memory-photo">
+                <img src="photos/photo7.jpg" alt="Our memory 7">
+                <p>Just us. 💗</p>
+            </div>
+
+            <div class="memory-photo">
+                <img src="photos/photo8.jpg" alt="Our memory 8">
+                <p>A moment I'll always remember. 🥹</p>
+            </div>
+
+            <div class="memory-photo">
+                <img src="photos/photo9.jpg" alt="Our memory 9">
+                <p>Another one for the memories. 🌸</p>
+            </div>
+
+            <div class="memory-photo">
+                <img src="photos/photo10.jpg" alt="Our memory 10">
+                <p>And many more to come… 💕</p>
+            </div>
+
+        </div>
+
+        <p class="memories-ending">
+            And this is just the beginning… 👀💗
+        </p>
+
+        <button class="yes-btn" onclick="goToPage5()">
+            NEXT 🌸
+        </button>
+
+    </div>
+
+</main>
+
+
+<!-- =========================
+     PAGE 5 - HIDDEN HEART GARDEN
+     ========================= -->
+
+<main class="welcome-page" id="page5" style="display: none;">
+
+    <div class="garden-card">
+
+        <div class="little-heart">🌷</div>
+
+        <p class="small-line">
+            Kanna… 👀
+        </p>
+
+        <h1>
+            Find the<br>
+            <span>hidden heart.</span>
+        </h1>
+
+        <p class="garden-intro">
+            Ee garden lo nee kosam oka special heart hide chesaa… 💗
+        </p>
+
+        <p class="garden-hint">
+            Can you find it? 👀
+        </p>
+
+        <div class="garden">
+
+            <span class="garden-flower flower-a">🌸</span>
+            <span class="garden-flower flower-b">🌷</span>
+            <span class="garden-flower flower-c">🌼</span>
+            <span class="garden-flower flower-d">🌺</span>
+
+            <span class="garden-butterfly butterfly-a">🦋</span>
+            <span class="garden-butterfly butterfly-b">🦋</span>
+
+            <button class="hidden-heart" onclick="findHeart()">
+                💗
+            </button>
+
+        </div>
+
+        <p class="garden-message" id="gardenMessage"></p>
+
+        <button
+            class="yes-btn garden-next"
+            id="gardenNext"
+            onclick="goToPage6()"
+            style="display: none;">
+            NEXT 💕
+        </button>
+
+    </div>
+
+</main>
+
+
+<!-- =========================
+     PAGE 6 - LOVE MACHINE
+     ========================= -->
+
+<main class="welcome-page" id="page6" style="display: none;">
+
+    <div class="love-machine-card">
+
+        <div class="little-heart">💗</div>
+
+        <p class="small-line">
+            You found the secret! 👀
+        </p>
+
+        <h1>
+            One more little<br>
+            <span>surprise...</span>
+        </h1>
+
+        <p class="machine-intro">
+            This little machine has something special for you. 🥹💗
+        </p>
+
+        <!-- CUTE MACHINE SCENE -->
+
+        <div class="love-machine-scene">
+
+            <!-- LEFT CHARACTER -->
+
+            <div class="machine-character character-left">
+
+                <div class="character-body">
+                    🧸
+                </div>
+
+                <div class="character-heart">
+                    ♡
+                </div>
+
+            </div>
+
+
+            <!-- MACHINE -->
+
+            <div class="love-machine">
+
+                <div class="machine-header">
+                    <span>♡ LOVE ♡</span>
+                </div>
+
+
+                <!-- SCREEN -->
+
+                <div class="machine-screen">
+
+                    <div class="screen-heart" id="screenHeart">
+                        💗
+                    </div>
+
+                    <p id="screenText">
+                        READY?
+                    </p>
+
+                </div>
+
+
+                <!-- HEART DISPLAY -->
+
+                <div class="heart-display">
+
+                    <span>💗</span>
+                    <span>💕</span>
+                    <span>💖</span>
+                    <span>💞</span>
+                    <span>💓</span>
+
+                </div>
+
+
+                <!-- DISPENSER -->
+
+                <div class="machine-dispenser">
+
+                    <div class="dispenser-opening"></div>
+
+                    <div
+                        class="dispensing-hearts"
+                        id="heartOutput">
+                    </div>
+
+                </div>
+
+
+                <!-- BUTTON -->
+
+                <button
+                    class="machine-button"
+                    id="machineButton"
+                    onclick="releaseHearts()">
+
+                    PRESS ME 💕
+
+                </button>
+
+
+                <div class="machine-light"></div>
+
+            </div>
+
+
+            <!-- RIGHT CHARACTER -->
+
+            <div class="machine-character character-right">
+
+                <div class="character-body">
+                    🐰
+                </div>
+
+                <div class="character-heart">
+                    ♡
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- MESSAGE -->
+
+        <p
+            class="machine-message"
+            id="vendingMessage">
+        </p>
+
+
+        <!-- SECRET CARD -->
+
+        <div
+            class="secret-card"
+            id="secretCard">
+
+            <div class="secret-card-heart">
+                💌
+            </div>
+
+            <p>
+                A little something<br>
+                for my favourite person. 🥹💗
+            </p>
+
+            <button
+                class="open-secret-btn"
+                onclick="openSecretCard()">
+
+                OPEN IT 👀
+
+            </button>
+
+        </div>
+
+
+        <!-- NEXT -->
+
+        <button
+            class="yes-btn machine-next"
+            id="vendingNext"
+            onclick="goToPage7()"
+            style="display: none;">
+
+            NEXT 💗
+
+        </button>
+
+    </div>
+
+</main>
+
+
+<!-- =========================
+     PAGE 7 - FINAL REVEAL
+     ========================= -->
+
+<main class="welcome-page" id="page7" style="display: none;">
+
+    <div class="final-reveal">
+
+        <div class="final-heart">
+            💗
+        </div>
+
+        <p class="final-small">
+            And now...
+        </p>
+
+        <h1>
+            I LOVE YOU<br>
+            <span>FOREVER, KANNA 💗</span>
+        </h1>
+
+        <div class="final-divider">
+            ♡ ♡ ♡
+        </div>
+
+        <p class="final-message">
+            No matter how many little surprises<br>
+            I make for you...
+            <br><br>
+            You will always be<br>
+            my favourite person. 🥹❤️
+        </p>
+
+    </div>
+
+</main>
+
+
+<script>
+    const bgMusic = document.getElementById("bgMusic");
+    const musicButton = document.getElementById("musicButton");
+
+    let musicStarted = false;
+
+    function startMusic() {
+        if (!musicStarted) {
+            bgMusic.play()
+                .then(function () {
+                    musicStarted = true;
+                    musicButton.innerHTML = "🔊";
+                })
+                .catch(function () {
+                    // Browser blocked playback; user can press the music button.
+                });
+        }
+    }
+
+    function toggleMusic() {
+        if (bgMusic.paused) {
+            bgMusic.play();
+            musicButton.innerHTML = "🔊";
+            musicStarted = true;
+        } else {
+            bgMusic.pause();
+            musicButton.innerHTML = "🎵";
+        }
+    }
+
+    // Starts Ammaadi after the first interaction with the website.
+    document.addEventListener("click", startMusic, { once: true });
+</script>
+
+<script src="script.js"></script>
+```
+
+</body>
+
+</html>
